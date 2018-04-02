@@ -23,12 +23,12 @@
     <p  >{{test}}</p>
     <div class="weui-cells__title">带跳转的列表项</div>
   <div class="weui-cells weui-cells_after-title">
-    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <div class="weui-cell__bd">cell standard</div>
+    <navigator url="/pages/weui_test/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <div class="weui-cell__bd">weui_test</div>
       <div class="weui-cell__ft weui-cell__ft_in-access"></div>
     </navigator>
-    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <div class="weui-cell__bd">cell standard</div>
+    <navigator url="/pages/jade_test/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <div class="weui-cell__bd">jade_test</div>
       <div class="weui-cell__ft weui-cell__ft_in-access"></div>
     </navigator>
 </div>
@@ -61,7 +61,7 @@ export default {
   methods: {
 
     bindViewTap () {
-      const url = '../logs/main'
+      const url = '../test/main?username=prayone'
       wx.navigateTo({ url })
     },
     getUserInfo () {
@@ -80,7 +80,6 @@ export default {
       console.log('clickHandle:', msg, ev)
     },
     clickTest(){
-      console.log('sssssssssssssssssssssssssss')
       store.commit('increment',20)
     }
   },
@@ -88,7 +87,13 @@ export default {
   created () {
     // 调用应用实例的方法获取全局数据
     this.getUserInfo()
+    store.commit('increment',20)
+  },
+  mounted () {
+    
+    console.log((this.$el))
   }
+
 }
 </script>
 

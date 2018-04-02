@@ -10,7 +10,7 @@
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
 	"appid": "touristappid",
-	"projectname": "mpvue",
+	"projectname": "xx",
 	"condition": {
 		"search": {
 			"current": -1,
