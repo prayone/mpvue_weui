@@ -15,23 +15,27 @@
     </div>
 
     <form class="form-container">
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
+      <input type="text" class="form-control" v-model="motto" placeholder="v-model"/>
+      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy"/>
     </form>
     <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
     <button @click="clickTest">{{testInfo}}</button>
     <p  >{{test}}</p>
     <div class="weui-cells__title">带跳转的列表项</div>
-  <div class="weui-cells weui-cells_after-title">
-    <navigator url="/pages/weui_test/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <div class="weui-cell__bd">weui_test</div>
-      <div class="weui-cell__ft weui-cell__ft_in-access"></div>
-    </navigator>
-    <navigator url="/pages/jade_test/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <div class="weui-cell__bd">jade_test</div>
-      <div class="weui-cell__ft weui-cell__ft_in-access"></div>
-    </navigator>
-</div>
+    <div class="weui-cells weui-cells_after-title">
+      <navigator url="/pages/weui_test/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <div class="weui-cell__bd">weui_test</div>
+        <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+      </navigator>
+      <navigator url="/pages/jade_test/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <div class="weui-cell__bd">jade_test</div>
+        <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+      </navigator>
+      <navigator url="/pages/countTest/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <div class="weui-cell__bd">count_test</div>
+        <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+      </navigator>
+    </div>
   </div>
 
 </template>
@@ -90,8 +94,7 @@ export default {
     store.commit('increment',20)
   },
   mounted () {
-    
-    console.log((this.$el))
+
   }
 
 }
