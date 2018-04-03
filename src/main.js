@@ -7,7 +7,7 @@ App.mpType = 'app'
 const app = new Vue(App)
 app.$mount()
 
-import '../static/weui.css'
+// import '../static/weui.css'
 
 export default {
   // 这个字段走 app.json
