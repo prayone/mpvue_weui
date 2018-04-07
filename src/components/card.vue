@@ -3,12 +3,26 @@
     <p class="card">
       {{text}}
     </p>
+    <button @click='btn'>click</button>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['text']
+	data(){
+		return{
+			age:20,
+			grade:4
+		}
+	},
+  props: ['text'],
+  methods:{
+  	btn(){
+  		this.text='jjj';
+  		this.$emit('changeAge',this.age,this.grade)
+
+  	}
+  }
 }
 </script>
 

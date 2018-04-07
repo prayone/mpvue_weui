@@ -48,6 +48,18 @@ module.exports = {
   module: {
     rules: [
       {
+       test : /\.jade$/,
+       loader : 'jade-loader',
+      },
+      {
+
+        test:/\.css$/,
+
+        loader:'style-loader!css-loader!stylus-loader',
+        include:[]
+
+      },
+      {
         test: /\.vue$/,
         loader: 'mpvue-loader',
         options: vueLoaderConfig
