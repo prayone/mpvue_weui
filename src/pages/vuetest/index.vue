@@ -50,6 +50,7 @@
 			  </label>
 			</checkbox-group>
 		</view>
+		
 		<view class="section">
 			<view class="section__title">单选：radio</view>
 			<radio-group class="radio-group" @change="radioChange">
@@ -142,5 +143,4 @@
 		checkbox-group,radio-group
 			margin 20rpx auto
 			width 85%
-		
 </style>
